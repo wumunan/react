@@ -1,0 +1,446 @@
+@import '@/lib/reset.scss';
+
+html, body, .container, #root {
+  @include rect(100%, 100%);
+}
+
+.container {
+  @include flexbox();
+  @include flex-direction(column);
+  .box {
+    @include flex();
+    @include rect(100%, auto);
+    @include flexbox();
+    @include flex-direction(column);
+    .header {
+      @include rect(100%, 0.44rem);
+      @include flexbox();
+      @include align-items();
+      @include background-color(#fff);
+      img{
+        display: inline-block;
+        @include rect(0.65rem, 0.18rem);
+        vertical-align: middle;
+        border: 0;
+        margin-top: 0.06rem;
+        margin-bottom: 0.06rem;
+        margin-left: 0.15rem;
+      }
+      .am-search{
+        @include background-color(#f5f5f5);
+        @include rect(2.7rem, 0.28rem);
+        border-radius: 0.3rem;
+        margin-left: 0.15rem;
+        margin-bottom: 0.05rem;
+        .am-search-input{
+          @include background-color(#f5f5f5);
+        }
+
+        .sub-title {
+          color: #888;
+          font-size: 0.14rem;
+        }
+        .am-search-value{
+          @include background-color(#f5f5f5);
+        }
+      }
+    }
+    .content {
+      @include flex();
+      @include rect(100%, auto);
+      @include flex-direction(column);
+
+      .am-whitespace{
+        height: 0;
+        @include background-color(#fff);
+      }
+
+      .am-tabs-default-bar-underline{
+        border: 1px solid #000;
+        @include text-color(#000);
+        width: 9% !important;
+        margin-left: 8% !important;
+      }
+      .am-tabs-default-bar-tab {
+        @include text-color(#808080);
+      }
+      .am-tabs-default-bar-tab-active{
+        @include text-color(#000);
+      }
+      .am-wingblank{
+        width: 100%;
+      }
+    }
+  }
+  .footer {
+    @include rect(100%, 0.5rem);
+    @include background-color(#eee);
+
+    ul {
+      @include rect(100%, 100%);
+      @include flexbox();
+      a {
+        @include flex();
+        @include flexbox();
+        @include justify-content();
+        @include align-items();
+        @include text-color(#808080);
+        @include flex-direction(column);
+        @include font-size(0.14rem);
+
+        span{
+          @include font-size(0.16rem);
+          @include text-color(#808080);
+        }
+
+        &.active {
+          @include text-color(#000);
+        }
+      }
+    }
+  }
+}
+
+
+.bot {
+  @include rect(100%, 1.64rem);
+  @include flexbox();
+  @include justify-content(space-around);
+  @include background-color(#fff);
+
+  a{
+    display: inline-block;
+    @include flex();
+    @include flex-direction(row);
+    @include justify-content(space-around);
+    // float: left;
+    width: 31.4%;
+    text-align: center;
+    color: #000;
+    
+
+    h5{
+      width: 100%;
+      margin: 0.1rem 0rem 0rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+  }
+}
+
+.bot1{
+  @include rect(100%, auto);
+  @include flexbox();
+  @include background-color(#fff);
+  overflow-x: scroll;
+
+  a{
+    text-align: center;
+    width: 0.9rem;
+    margin-right: 0.15rem;
+    margin-left: 0.2rem;
+
+    h4{
+      // width: 100%;
+      font-weight: 100;
+      margin: 0.1rem 0rem 0rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #808080;
+    }
+    span{
+      color: #000;
+    }
+  }
+}
+
+.word{
+  @include rect(100%, auto);
+  @include text-align(center);
+  margin-top: 0.2rem;
+
+  a{
+    @include font-size(0.16rem);
+    @include text-color(#4a4a4a);   
+  }
+  span{
+    @include font-size(0.24rem);
+  }
+}
+.detail{
+  @include rect(100%, 100%);
+  overflow: hidden;
+  overflow-y: scroll;
+  @include background-color(#fff);
+  li{
+    @include rect(49.8%, 2.8rem);
+    float: left;
+    padding-bottom: 0.1rem;
+
+    .detailTitle{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin-bottom: 0.05rem;
+      margin-left: 0.3rem;
+      width: 88%;
+      margin-top: 0.1rem;
+      float: left;
+
+
+      h4{
+        color: #808080;
+        font-weight: 100;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+      }
+
+      p{
+        color: #808080;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width:80%;
+      }
+
+      span{
+        font-family: PingFangSC-Regular;
+        color: #000;
+        margin-right: 0.1rem;
+      }
+    }
+  }
+}
+
+.result{
+  @include background-color(#fff);
+  margin-bottom: 0.2rem;
+  padding-bottom: 0.2rem;
+   
+.title{
+  text-align: center;
+  font-weight: bold;
+  font-size:0.22rem;
+  color: #333;
+  padding-top: 0.2rem;
+}
+.tit{
+text-align: center;
+font-size: 0.14rem;
+color: #808080;
+margin-bottom: 0.2rem;
+padding-top: 0.2rem;
+}
+
+}
+.detailsBox{
+  @include rect(100%, 100%);
+  // @include flexbox();
+  // @include flex-direction(column);
+
+  .am-navbar{
+    @include rect(100%, 7%);
+  }
+  .box{
+    @include rect(100%, 93%);
+    overflow: hidden;
+    overflow-y: scroll;
+    margin-bottom: 0.44rem;
+    float: left;
+
+    .headlist{
+      @include rect(100%, auto);
+      padding-bottom: 0.28rem;
+
+      ul{
+        @include rect(95%, auto);
+        margin-left: 0.2rem;
+        padding-bottom: 0.28rem;
+
+        h4{
+          margin-bottom: 0.1rem;
+        }
+          span{
+            @include text-color(#000);
+            @include font-size(0.16rem);
+
+          }
+         
+      }
+    }
+
+    .details{
+      @include rect(100%, auto);  
+      p{
+        width: 100%;
+        font-family: PingFangSC-Regular;
+        color: #707070;
+        margin-top: 0.05rem;
+        margin-bottom: 0.1rem;
+        padding: 0 0.3rem
+      }
+    
+      h5{
+        margin-top: 0.05rem;
+        font-family: PingFangSC-Regular;
+        color: #000;
+        letter-spacing: 0.01rem;
+        text-align: center;
+        margin-bottom: 0.1rem;
+        padding: 0 0.5rem
+      }
+    }
+    .congif{
+      margin-top: 0.2rem;
+      @include rect(100%, auto);
+      text-align: center;
+
+      h1{
+        width:90%;
+        @include font-size(0.18rem);
+        @include text-color(#000);
+      }
+   
+     ul{
+       @include rect(90%, 100%);
+       margin: 0 auto;
+   
+       li{
+         @include rect(100%, 0.4rem);
+         border-bottom: 0.005rem solid #ccc;
+         line-height: 0.32rem;
+   
+         span{
+           display: inline-block;
+         }
+       }
+     }
+    }
+
+  }
+
+.foot{
+  @include background-color(#fff);
+  z-index: 9999;
+  @include rect(100%, 0.44rem);
+  position: absolute;
+  position: fixed;
+  bottom:  0;
+
+  .foot1{
+    @include rect(100%, 100%);
+    @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    @include align-items(center);
+
+    li{
+      @include rect(100%, 100%);
+      text-align: center;
+    }
+
+    button{
+      border: 0;
+      @include rect(100%, 100%);
+      @include background-color(yellow);
+      text-align: center;
+      @include font-size(0.18rem);
+    }
+
+    span{
+      @include font-size(0.22rem); 
+    }
+
+    li:nth-child(1){
+      @include flexbox();
+      @include flex-direction(row);
+      @include justify-content(space-around);
+      @include align-items(center);
+    }
+
+    li:nth-child(2){
+      @include flexbox();
+      @include align-items(center);  
+      @include justify-content();
+      a{
+        @include text-color(#000);
+        @include font-size(0.18rem);
+      }
+    }
+  }
+}
+
+}
+
+.searchBox{
+  @include background-color(#fff);
+  @include rect(100%, 100%);
+  @include flexbox();
+  @include flex-direction(column);
+
+  .searchhead{
+    @include rect(100%,0.44rem);
+    @include flexbox();
+    @include align-items(center);
+  
+    .am-search{
+      @include background-color(#f5f5f5);
+      @include rect(2.7rem, 0.28rem);
+      border-radius: 0.3rem;
+      margin-left: 0.15rem;
+      margin-bottom: 0.05rem;
+      .am-search-input{
+        @include background-color(#f5f5f5);
+      }
+  
+      .sub-title {
+        color: #888;
+        font-size: 0.14rem;
+      }
+      .am-search-value{
+        @include background-color(#f5f5f5);
+      }
+    }
+
+    span{
+      @include font-size(0.18rem);
+      margin-left:0.5rem;
+    }
+  }
+
+  .searchCon{
+    margin-top: 0.1rem;
+    @include rect(100%, 100%);
+    p{
+      color: #808080;
+      margin-bottom: 0.15rem;
+    }
+    .keyword{
+      display: inline-block;
+      margin-bottom: 0.1rem;
+
+      span{
+        font-size: 0.14rem;
+        color: #000;
+        text-align: center;
+        padding: 0.05rem 0.1rem;
+        background-color: #F5F5F5;
+        margin-right: 0.2rem;
+        margin-bottom: 0.2rem;
+      }
+    }
+    .hot{
+      padding: 0.36rem 0.32rem 0rem;
+    }
+    .history{
+      padding: 0.36rem 0.32rem 0rem;
+    }
+  }
+ 
+}
